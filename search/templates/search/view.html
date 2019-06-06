@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <div class="container-fluid">
+    <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Item Name</th>
+        <th scope="col">Price(Retail)</th>
+        <th scope="col">Price(Wholesale)</th>
+        <th scope="col">Date(Item added)</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for obj in object_list %}
+      <tr>
+        <th scope="row">{{obj.pk}}</th>
+        <td>{{obj.item_name}}</td>
+        <td>Ksh.{{obj.price_retail}} @kg</td>
+        <td>Ksh.{{obj.price_wholesale}} per dozen</td>
+        <td>{{obj.date}}</td>
+      </tr>
+      {% endfor%}
+    </tbody>
+    </table>
+  </div>
+
+
+
+{% endblock %}

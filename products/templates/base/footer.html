@@ -1,0 +1,9 @@
+{% load static %}
+{% block content %}
+<footer class="footer">
+     <div class="container">
+       {% now "Y" as current_year %}
+       Benja store &copy; Copyright {{ current_year }}. All Rights Reserved.
+     </div>
+</footer>
+{% endblock %}
